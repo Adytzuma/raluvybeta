@@ -414,7 +414,7 @@ class Music:
                
                
     @commands.cooldown(1, 5, commands.BucketType.user)
-    @commands.command(name='stop', aliases=["leave", "Leave", "LEAVE", "Stop", "STOP"])
+    @commands.command(name='stop', aliases=["Stop", "STOP"])
     async def stop_(self, ctx):
         """Stop the currently playing song and destroy the player.
         !Warning!
