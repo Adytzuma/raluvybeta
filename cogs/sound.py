@@ -162,8 +162,8 @@ class sound:
         else:
             await ctx.send(error)
 
-    @commands.command(aliases = ["leave", "end", "disconnect"])
-    async def stop(self, ctx):
+    @commands.command()
+    async def leave(self, ctx):
         if ctx.voice_client != None:
             await ctx.voice_client.disconnect()
             await ctx.message.add_reaction('\U0001f4e4')
