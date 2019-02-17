@@ -17,7 +17,6 @@ import json
 bot = commands.Bot(command_prefix=';;')
 logging.basicConfig(level='INFO')
 bot.load_extension("cogs.admin")
-bot.load_extension("cogs.youtube")
 bot.load_extension("cogs.sound")
 bot.load_extension("cogs.music")
 
