@@ -20,6 +20,7 @@ logging.basicConfig(level='INFO')
 bot.load_extension("cogs.admin")
 bot.load_extension("cogs.sound")
 bot.load_extension("cogs.music")
+OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll', 'libopus-0.dll', 'libopus.so.0', 'libopus.0.dylib']
 def load_opus_lib(opus_libs=OPUS_LIBS):
     if opus.is_loaded():
         return True
