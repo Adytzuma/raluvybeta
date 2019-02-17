@@ -11,6 +11,7 @@ from discord.ext import commands
 from asyncio import sleep
 import logging
 import os
+from discord import opus
 import json
 
 
@@ -19,6 +20,17 @@ logging.basicConfig(level='INFO')
 bot.load_extension("cogs.admin")
 bot.load_extension("cogs.sound")
 bot.load_extension("cogs.music")
+def load_opus_lib(opus_libs=OPUS_LIBS):
+    if opus.is_loaded():
+        return True
+    for opus_lib in opus_libs:
+        try:
+            opus.load_opus(opus_lib)
+            return
+        except OSError:
+            pass
+    raise RuntimeError('Could not load an opus lib. Tried %s' % (', '.join(opus_libs)))
+load_opus_lib()
 
 @bot.event
 async def on_ready():
