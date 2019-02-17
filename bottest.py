@@ -20,6 +20,15 @@ import traceback
 from async_timeout import timeout
 from functools import partial
 from youtube_dl import YoutubeDL
+import discord
+import random
+from discord.ext import commands
+import logging
+import traceback
+import asyncio
+import os
+from discord import opus
+from asyncio import sleep
 
 bot = commands.Bot(command_prefix=';;')
 logging.basicConfig(level='INFO')
