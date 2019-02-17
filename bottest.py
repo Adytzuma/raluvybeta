@@ -13,7 +13,13 @@ import logging
 import os
 from discord import opus
 import json
-
+import discord
+import itertools
+import sys
+import traceback
+from async_timeout import timeout
+from functools import partial
+from youtube_dl import YoutubeDL
 
 bot = commands.Bot(command_prefix=';;')
 logging.basicConfig(level='INFO')
